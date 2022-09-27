@@ -1,0 +1,37 @@
+תפריט שיודע לפצל את הסאונדים של משחק, ונותן שליטה על כל סאונד וסאונד.
+מעבר לחלוקה של background? 
+או 
+שהוא יודע להוריד אוטומטי סאונד שמכאיב? שעובר דציבלים מסוימים?
+* איך נגדיר מה הסאונד הרצוי
+* איך נתרגם את זה לדציבלים הרצויים 
+אני מרגישה שאני צריכה מידי פעם לסדר את הסאונדים, להגביר ולהנמיך, ולשחק עם זה כל הזמן.
+מה אם יהיה משהו שיעשה את זה אטומטית בשבילי, אחרי שהגדרתי לו את הצלילים?
+אולי מערכת שתדע לעשות את זה אטומוטי, מבלי צורך להכנס ולשנות כל פעם את התפריט? אבל כן נותנת איזושהי גמישות? 
+
+אם אני רוצה עכשיו ליצור מערכת שמתממשקת עם משחקי מחשב, איך אני ניגשת לזה? מה אני צריכה לעשות, כדי שאוכל לכתוב תוכנה שתדע להתממשק ולעשות שינויים? API, ו..? 
+יש ענייני הרשאות 
+ומה עוד? 
+
+איך בודקים שסאונד מאוזן? 
+מה זה איזון נכון, איך דואגים לאיזון נכון של סאונד לאנשים?
+
+(פה ההנחה היא לשתי אוזניים שעובדות...אבל אולי צריך שיהיה גם איזון ביניהן? - נגיד, מה מורן היה צריך לזה?)
+
+amixer - command line mixer for ALSA soundcard driver - maybe I need to work with the drivers?
+alsamixer - with ncurses interface
+pulseaudio?
+
+
+ASLA - advanced linux sound architecture, framework that sound drivers communicate through. The Kernel (Linux itself) communicates with ALSA, which then turn communicates with an audio server such as PulseAudio, which then communicates with the applications on the system.
+
+PulseAudio - sound server. Essentially, PulseAudio directs the sound it receives from ALSA, to your speakers, headphones, etc.
+Without PulseAudio, typically ALSA can only send sound to one place at a time. PulseAudio on the other hand allows sound to come from multiple sources at once, and be sent out to multiple places at the same time.
+
+Another feature of PulseAudio is the ability to control volume for separate applications independently. 
+
+pavucontrol - can mess with PulseAudio directly
+
+
+60db - human conversation 
+
+new vol = old_vol * profiling/GetAmplitudeLevel (ask Niv)

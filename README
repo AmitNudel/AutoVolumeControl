@@ -1,0 +1,64 @@
+                            ___|\_______|________|_______________________O__________@____________
+                            ___|/_______|________|_|___|__________|__@__|_____@__|_|____O._______||
+                            __/|____4___|__O_____|_|___|__O.______|_|@__|____|___|_|___|O.______o||
+                            _(_/^\__4__@|_|_____@__|___|_|________|_|@__|____|___|_|___|________o||
+                            __\|/'_____@__|________|__@|_|________|_|________|___|_____|_________||
+                               d          |           @  |          |
+                        ---------------------------------------------------------------------------- 
+                    ____ _  _ ___ ____    _  _ ____ _    _  _ _  _ ____    ____ ____ _  _ ___ ____ ____ _    
+                    |__| |  |  |  |  |    |  | |  | |    |  | |\/| |___    |    |  | |\ |  |  |__/ |  | |    
+                    |  | |__|  |  |__|     \/  |__| |___ |__| |  | |___    |___ |__| | \|  |  |  \ |__| |___
+
+                                                        Amit Nudel               
+                        ----------------------------------------------------------------------------
+
+
+About the project - 
+-----------------
+I found that listening to sound can be quite of a task for me. Playing with the volume started to feel a bit time consuming.
+I wanted to create a program that will be smart enough to control the sound automatically, so I'll be free to do other tasks. 
+The program knows how to recieve audio, check it's amplitude and level it to the user's profile. I learned how to connect and
+use ALSA and modify the master audio output. 
+
+Features:
+--------
+* Setting master volume
+* Get amplitude level
+* Checking if headphones are connected
+* User sound profiling  
+* Feautre users info can be uploaded to hash for fast searching
+
+Future updates:
+--------------
+* Adding watchdog
+* The program will run an amplitude check, and update the volume accordingly
+* Bug logger
+* User input will be kept in a file, so the user won't need to do the profiling process every time, but will be able to update 
+  it, or create a seperate profile for another user.
+* Running the program in the background, and giving an exit option to the user
+* Add sound files to the profiling function 
+* Friendly user interface.
+* Detecting earphones unplogged
+* Detecting if there's muisic playing on opening the program 
+
+How to install and run the project:
+----------------------------------
+Give install.sh permissions and run with main.o.
+In order to make the debug file, run the command make debug.o, then run debug.o. 
+
+How to use:
+----------
+After you run the program for the first time, you will need to enter the wanted volume level in the profiling function.
+Make sure your headphones are connected. 
+Then just let the program run in the background. 
+
+Bugs:
+----
+1. The GetAmplitudeLevel(), in a while loop, makes the volume menu to flicker. 
+
+Credits:
+-------
+
+License: ?
+-------
+
